@@ -1,0 +1,12 @@
+[Unit]
+Description=ScriptInit
+
+[Service]
+Type=simple
+RemainAfterExit=yes
+ExecStart=/etc/add_zsh/rules.sh start
+ExecStop=/etc/add_zsh/rules.sh stop
+ExecReload=/etc/add_zsh/rules.sh restart
+
+[Install]
+WantedBy=multi-user.target
